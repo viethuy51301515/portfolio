@@ -1,4 +1,5 @@
 import React from 'react';
+import './menu.scss'
 class Menu extends React.Component{
     constructor(props){
         super(props);
@@ -11,7 +12,7 @@ class Menu extends React.Component{
                         <img src="" alt=""/>
                     </figure>
                 </div>
-                <div>
+                <div className='menu-list'>
                     <ul>
                         <li>Home</li>
                         <li>About</li>

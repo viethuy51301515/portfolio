@@ -7,11 +7,10 @@ class Layout extends React.Component{
     }
     render(){
         return(
-            <div>
+            <div className='layout'>
                 <section className='menu'>
                     <Menu></Menu>
                 </section>
-
             </div>
         )
     }
