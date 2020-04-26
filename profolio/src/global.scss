@@ -1,0 +1,7 @@
+$border-style:1px solid #2e344e;
+$menu-color:#191d2b;
+$background-color:rgb(16, 18, 27);
+@mixin padding-all {
+    padding-top: 120px;
+    padding-left: 10px;
+}

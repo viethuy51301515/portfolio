@@ -1,0 +1,6 @@
+@import '../../global.scss';
+.about{
+    background-color: $background-color;
+    min-height: 100vh;
+    @include padding-all
+}

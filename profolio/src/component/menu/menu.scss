@@ -1,16 +1,93 @@
+@import '../../global.scss';
+.hamburger-button{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: $menu-color;
+    border: $border-style;
+    top: 10px;
+    left: 100%;
+    outline: none;
+    font-size: 30px;
+    color: white;
+    display: none;
+}
+.user-profile{
+    border-bottom: $border-style;
+    text-align: center;
+    figure{
+        height: 200px;
+        width: 200px;
+        margin: 20px auto 20px auto;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 7px solid #2e344e;
+        img{
+            height: auto;
+            max-width: 100%;
+        }
+    }
+
+}
 .menu-list{
+    border-bottom: $border-style;
+    padding-top: 20px;
+    padding-bottom: 20px;
     ul{
         list-style: none;
+        text-align: center;
         // background-color: red;
         li{
-            height: 40px;
-            font-size: 1.2rem;
+            user-select: none;
+            a{
+                text-decoration: none;
+            }
         }
-        li:hover{
-            background-color:red;
+        .list--item{
+            transition: 0.4s all ease-out;
+            display: block;
+            font-size: 1.3rem;
+            padding: 5px 0;
+            letter-spacing: 1px;
+            font-weight: 600;
+            position: relative;
+            color: #a4acc4;
         }
-        li:active{
-            background-color: green;
+        .list--item::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 100%;
+            bottom: 0;
+            background-color: rgba(3,127,255,.2);
+            opacity: 0.3;
+            transition: all 0.4s ease-out;
+            
+            // visibility: hidden;
         }
+        .list--item:hover{
+
+            color: #037fff;
+        }
+        .list--item:hover::before{
+            // visibility: visible;
+            right: 0;
+        }
+
+    }
+}
+.author{
+    text-align: center;
+    display: block;
+    padding: 20px 0;
+}
+.active{
+    background-color: blue;
+}
+@media only screen and (max-width : 600px){
+    .hamburger-button{
+        visibility: visible;
+        display: block;
     }
 }
