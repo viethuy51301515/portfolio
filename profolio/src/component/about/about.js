@@ -12,6 +12,7 @@ class About extends React.Component{
                 <section>
                     <figure>
                         <img>
+
                         </img>
                     </figure>
                     <article>
