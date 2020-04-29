@@ -1,4 +1,9 @@
 @import '../../global.scss';
+.main-page{
+    background-color: $background-color;
+    min-height: 100vh;
+    @include padding-all
+}
 .layout{
     padding-left: 260px;
 }

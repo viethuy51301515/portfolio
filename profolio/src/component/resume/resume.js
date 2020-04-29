@@ -1,12 +1,12 @@
 import React from 'react';
 import Title from '../title_header';
 class Resume extends React.Component{
-    constructor(){
-
+    constructor(props){
+        super(props);
     }
     render(){
         return(
-            <div>
+            <div className='main-page'>
                 <Title title='Resume'></Title>
             </div>
         )

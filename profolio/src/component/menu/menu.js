@@ -41,10 +41,10 @@ class Menu extends React.Component{
                     <ul>
                         <li className={this.state.currentMenuIndex == "1" ? "active" : ""} onClick={() => this.activeMenu(1)}><Link to='/'><a className='list--item'>Home</a></Link></li>
                         <li className={this.state.currentMenuIndex == "2" ? "active" : ""} onClick={() => this.activeMenu(2)}><Link to='/about'><a className='list--item'>About</a></Link></li>
-                        <li className={this.state.currentMenuIndex == "3" ? "active" : ""} onClick={() => this.activeMenu(3)}><a className='list--item'>Resume</a></li>
-                        <li className={this.state.currentMenuIndex == "4" ? "active" : ""} onClick={() => this.activeMenu(4)}><a className='list--item'>Portfolios</a></li>
-                        <li className={this.state.currentMenuIndex == "5" ? "active" : ""} onClick={() => this.activeMenu(5)}><a className='list--item'>Achivement</a></li>
-                        <li className={this.state.currentMenuIndex == "6" ? "active" : ""} onClick={() => this.activeMenu(6)}><a className='list--item'>Contact</a></li>
+                        <li className={this.state.currentMenuIndex == "3" ? "active" : ""} onClick={() => this.activeMenu(3)}><Link to='/resume'><a className='list--item'>Resume</a></Link></li>
+                        <li className={this.state.currentMenuIndex == "4" ? "active" : ""} onClick={() => this.activeMenu(4)}><Link to='/portfolios'><a className='list--item'>Portfolios</a></Link></li>
+                        <li className={this.state.currentMenuIndex == "5" ? "active" : ""} onClick={() => this.activeMenu(5)}><Link to='/achivement'><a className='list--item'>Achivement</a></Link></li>
+                        <li className={this.state.currentMenuIndex == "6" ? "active" : ""} onClick={() => this.activeMenu(6)}><Link to='/contact'><a className='list--item'>Contact</a></Link></li>
                     </ul>
                 </div>
                 <div className='author'>

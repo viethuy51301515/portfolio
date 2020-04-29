@@ -1,9 +1,13 @@
 import React from 'react';
 import Menu from '../menu';
 import './layout.scss'
-import Home from '../home';
 import {BrowserRouter,Route} from 'react-router-dom'
+import Home from '../home';
 import About from '../about';
+import Achivement from '../achivement';
+import Contact from '../contact';
+import Portfolios from '../portfolios';
+import Resume from '../resume';
 class Layout extends React.Component{
     constructor(props){
         super(props);
@@ -25,6 +29,11 @@ class Layout extends React.Component{
         
                         <Route path='/' exact component={Home}></Route>
                         <Route path='/about' exact component={About}></Route>
+                        <Route path='/achivement' exact component={Achivement}></Route>
+                        <Route path='/contact' exact component={Contact}></Route>
+                        <Route path='/portfolios' exact component={Portfolios}></Route>
+                        <Route path='/resume' exact component={Resume}></Route>
+
                     </section>
                 </BrowserRouter>
             </div>

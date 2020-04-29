@@ -7,7 +7,7 @@ class Portfolios extends React.Component{
     }
     render(){
         return(
-            <div>
+            <div className='main-page'>
                 <Title title='Portfolios'></Title>
             </div>
         )
