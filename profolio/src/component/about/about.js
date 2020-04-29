@@ -9,6 +9,28 @@ class About extends React.Component{
         return(
             <div className='about'>
                 <Title title='ABOUT ME'></Title>
+                <section>
+                    <figure>
+                        <img>
+                        </img>
+                    </figure>
+                    <article>
+                        <h1>
+
+                        </h1>
+                        <p>
+
+                        </p>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </article>
+                </section>
             </div>
         )
     }

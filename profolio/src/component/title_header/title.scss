@@ -1,5 +1,14 @@
 .title{
     position: relative;
+    animation: title-animate 1s ease-in-out ;
+}
+@keyframes title-animate{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 .title__header{
     font-size: 2.3rem;
