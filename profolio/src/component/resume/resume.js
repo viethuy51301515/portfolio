@@ -44,8 +44,8 @@ class Resume extends React.Component{
                 <Header />
                 <section className='working'>
                     <div>
-                        <aside>
-
+                        <aside className='time'>
+                            <h1>2018 - Present</h1>
                         </aside>
                         <article>
 
