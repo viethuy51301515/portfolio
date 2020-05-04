@@ -43,12 +43,14 @@ class Resume extends React.Component{
                 <Title title='resume'></Title>
                 <Header />
                 <section className='working'>
-                    <div>
+                    <div className='working-item'>
                         <aside className='time'>
                             <h1>2018 - Present</h1>
                         </aside>
                         <article>
-
+                            <h1>Frontend Web Developer</h1>
+                            <h2>Abc Company</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro.</p>
                         </article>
                     </div>
                 </section>
