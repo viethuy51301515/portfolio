@@ -1,6 +1,6 @@
 @import '../../global.scss';
 .main-page{
-    background-color: $background-color;
+    
     min-height: 100vh;
     @include padding-all
 }
@@ -31,7 +31,8 @@
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: 1;
+    // z-index: 1;
+    background-color: $background-color;
     span{
         background-color: #1e1e1e;
         height: 100%;

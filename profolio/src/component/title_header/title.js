@@ -10,8 +10,9 @@ class Title extends React.Component{
                 <h1 className='title__header'>
                     {this.props.title}
                 </h1>
-                <span className='title__line'>
-                    
+                <span className='title__line' />
+                <span className='title__shadow'>
+                    {this.props.title}
                 </span>
             </div>
         )

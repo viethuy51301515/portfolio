@@ -68,7 +68,7 @@
         }
         .list--item:hover{
 
-            color: #037fff;
+            color: blue;
         }
         .list--item:hover::before{
             // visibility: visible;
@@ -83,7 +83,8 @@
     padding: 20px 0;
 }
 .active{
-    background-color: blue;
+    background-color: $blue-color;
+    color: black;
 }
 @media only screen and (max-width : 600px){
     .hamburger-button{

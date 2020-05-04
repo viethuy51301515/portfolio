@@ -1,6 +1,8 @@
+@import '../../global.scss';
 .title{
     position: relative;
     animation: title-animate 0.4s ease-in-out ;
+    margin:50px 0 50px 0;
 }
 @keyframes title-animate{
     from{
@@ -16,6 +18,8 @@
     color: white;
     font-weight: 600;
     text-transform: uppercase;
+    position: relative;
+    z-index: 100;
 }
 .title__line{
     display: block;
@@ -24,16 +28,26 @@
     height: 5px;
     border-radius: 10px;
     background-color: rgba(3,127,255,.3);
-    z-index: 1;
+    z-index: 2;
 }
 .title__line::before{
     content: "";
     position: absolute;
-    background-color: #037fff;
+    background-color: $blue-color;
     top: 0;
     bottom: 0;
     left: 0;
     width: 35px;
     border-radius: 10px;
     z-index: 2;
+}
+.title__shadow{
+    position: absolute;
+    font-size: 4rem;
+    top: 100%;
+    left:10px;
+    transform: translateY(-50%);
+    color: rgba(25,29,43,.6);
+    z-index: 1;
+    text-transform: uppercase;
 }
