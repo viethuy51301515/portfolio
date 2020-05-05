@@ -47,9 +47,19 @@ class Resume extends React.Component{
                         <aside className='time'>
                             <h1>2018 - Present</h1>
                         </aside>
-                        <article>
+                        <article className='working-des'>
                             <h1>Frontend Web Developer</h1>
-                            <h2>Abc Company</h2>
+                            <h3>Abc Company</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro.</p>
+                        </article>
+                    </div>
+                    <div className='working-item'>
+                        <aside className='time'>
+                            <h1>2018 - Present</h1>
+                        </aside>
+                        <article className='working-des'>
+                            <h1>Frontend Web Developer</h1>
+                            <h3>Abc Company</h3>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro.</p>
                         </article>
                     </div>
