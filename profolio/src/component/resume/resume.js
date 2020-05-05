@@ -16,6 +16,7 @@ class Resume extends React.Component{
      
     render(){
         let listSkill =[];
+        let listWorking = [];
         let i = 0;
         while (i<6) {
             listSkill.push(
@@ -32,6 +33,18 @@ class Resume extends React.Component{
  
             </div>
             )
+            listWorking.push(
+                <div className='working-item'>
+                    <aside className='time'>
+                        <h1>2018 - Present</h1>
+                    </aside>
+                    <article className='working-des'>
+                        <h1>Frontend Web Developer</h1>
+                        <h3>Abc Company</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro.</p>
+                    </article>
+                </div>
+            )
             i++;
         }
         return(
@@ -43,26 +56,7 @@ class Resume extends React.Component{
                 <Title title='resume'></Title>
                 <Header />
                 <section className='working'>
-                    <div className='working-item'>
-                        <aside className='time'>
-                            <h1>2018 - Present</h1>
-                        </aside>
-                        <article className='working-des'>
-                            <h1>Frontend Web Developer</h1>
-                            <h3>Abc Company</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro.</p>
-                        </article>
-                    </div>
-                    <div className='working-item'>
-                        <aside className='time'>
-                            <h1>2018 - Present</h1>
-                        </aside>
-                        <article className='working-des'>
-                            <h1>Frontend Web Developer</h1>
-                            <h3>Abc Company</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro.</p>
-                        </article>
-                    </div>
+                    {listWorking}
                 </section>
             </div>
         )

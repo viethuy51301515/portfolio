@@ -58,7 +58,6 @@
 // working experience css
 .working{
     position: relative;
-    height: 500px;
     width: 100%;
     border-left: 4px solid $border-color;
     
@@ -88,9 +87,11 @@
     padding-left: 50px;
     h1{
         font-size: 1.5rem;
+        color: rgb(42, 110, 199);
     }
     h3{
         margin-bottom: 10px;
+        color: white;
     }
     p{
 
@@ -98,5 +99,5 @@
 }
 .working-item{
     display: flex;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
 }
