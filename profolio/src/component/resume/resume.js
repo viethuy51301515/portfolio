@@ -5,7 +5,7 @@ const Header = (props) =>{
     return(
         <div className='resume-smallheader'>
             <span className="icon-lunchbox"></span>
-            <h1>Working Experience</h1>
+            <h1>{props.title}</h1>
         </div>
     )
 }
@@ -54,7 +54,11 @@ class Resume extends React.Component{
                    {listSkill}
                 </section>
                 <Title title='resume'></Title>
-                <Header />
+                <Header title='working experience'/>
+                <section className='working'>
+                    {listWorking}
+                </section>
+                <Header title='education'/>
                 <section className='working'>
                     {listWorking}
                 </section>
