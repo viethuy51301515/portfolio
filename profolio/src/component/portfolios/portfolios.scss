@@ -4,7 +4,7 @@
     position: relative;
     >div{
         // height: 300px;
-        width: 350px;
+        width: 300px;
         margin-top: 30px;
         padding-right: 10px;
         padding-left: 10px;
@@ -14,27 +14,35 @@
     .portfolio-item__image::before{
         right: 15px;
     }
+    .action{
+        opacity: 1;
+        top: 50%;
+    }
+
 }
 .portfolio-item{
+    .action{
+        position: absolute;
+        list-style: none;
+        display: flex;
+        top: 80%;
+        left: 50%;
+        opacity: 0;
+        z-index: 100;
+        transition: 0.4s all ease-in-out;
+        transition-delay: 0.4s;
+        transform: translate(-50%,-50%);
+        font-size:60px;
+    }
     img{
         height: auto;
         max-width: 100%;
     }
     .portfolio-item__image{
         position: relative;
-        .action{
-            position: absolute;
-            list-style: none;
-            display: flex;
-            top: 50%;
-            left: 50%;
-            opacity: 0;
-            z-index: 100;
-            transition: 0.8s all ease-in-out;
-            transform: translate(-50%,-50%);;
-        }
+       
         // .action:hover{
-        //     opacity: 1;
+            
         // }
         
     }

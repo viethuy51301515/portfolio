@@ -28,16 +28,58 @@ let portfolios = [
         title:"T-shirt Mockup",
         description:"A beautiful t-shirt mockup"
     },
+    {
+        img:"",
+        title:"T-shirt Mockup",
+        description:"A beautiful t-shirt mockup"
+    },
+    {
+        img:"",
+        title:"T-shirt Mockup",
+        description:"A beautiful t-shirt mockup"
+    },
+    {
+        img:"",
+        title:"T-shirt Mockup",
+        description:"A beautiful t-shirt mockup"
+    },
+    {
+        img:"",
+        title:"T-shirt Mockup",
+        description:"A beautiful t-shirt mockup"
+    },
+    {
+        img:"",
+        title:"T-shirt Mockup",
+        description:"A beautiful t-shirt mockup"
+    },
+    {
+        img:"",
+        title:"T-shirt Mockup",
+        description:"A beautiful t-shirt mockup"
+    },
+    {
+        img:"",
+        title:"T-shirt Mockup",
+        description:"A beautiful t-shirt mockup"
+    },
+    {
+        img:"",
+        title:"T-shirt Mockup",
+        description:"A beautiful t-shirt mockup"
+    },
+    {
+        img:"",
+        title:"T-shirt Mockup",
+        description:"A beautiful t-shirt mockup"
+    },
 ]
 const PortForlioItem = function(props) {
     return(
         <div className='portfolio-item'>
             <div className='portfolio-item__image'>
                 <img src={img} alt=""/>
-                <ul className='action'>
-                    <li>search</li>
-                    <li>link</li>
-                </ul>
+                <a href='#'><span class="action icon-inspector-arrow"></span></a>
             </div>
                 <h5 className='portfolio-item__title'>
                     {props.title}
