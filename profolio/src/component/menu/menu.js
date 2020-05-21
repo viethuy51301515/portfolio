@@ -39,7 +39,7 @@ class Menu extends React.Component{
                 </div>
                 <div className='menu-list'>
                     <ul>
-                        <li className={this.state.currentMenuIndex == "1" ? "active" : ""} onClick={() => this.activeMenu(1)}><Link to='/'><a className='list--item'>Home</a></Link></li>
+                        <li className={this.state.currentMenuIndex == "1" ? "active" : ""} onClick={() => this.activeMenu(1)}><Link to='/portfolio'><a className='list--item'>Home</a></Link></li>
                         <li className={this.state.currentMenuIndex == "2" ? "active" : ""} onClick={() => this.activeMenu(2)}><Link to='/about'><a className='list--item'>About</a></Link></li>
                         <li className={this.state.currentMenuIndex == "3" ? "active" : ""} onClick={() => this.activeMenu(3)}><Link to='/resume'><a className='list--item'>Resume</a></Link></li>
                         <li className={this.state.currentMenuIndex == "4" ? "active" : ""} onClick={() => this.activeMenu(4)}><Link to='/portfolios'><a className='list--item'>Portfolios</a></Link></li>

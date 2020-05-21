@@ -27,6 +27,7 @@ class Layout extends React.Component{
                             <span></span>
                         </div>
         
+                        <Route path='/portfolio' exact component={Home}></Route>
                         <Route path='/' exact component={Home}></Route>
                         <Route path='/about' exact component={About}></Route>
                         <Route path='/achivement' exact component={Achivement}></Route>
