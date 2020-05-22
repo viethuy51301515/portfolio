@@ -9,6 +9,14 @@ class Achivement extends React.Component{
         return(
             <div className='main-page'>
                 <Title title='Achivement'></Title>
+                <div className='achivement-grid'>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </div>
         )
     }

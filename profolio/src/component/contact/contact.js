@@ -9,6 +9,14 @@ class Contact extends React.Component{
         return(
             <div className='main-page'>
                  <Title title='Contact'></Title>
+                 <div>
+                     <section>
+                        <h1>Get In Touch</h1>
+                     </section>
+                     <section>
+                        
+                     </section>
+                 </div>
             </div>
         )
     }
