@@ -102,6 +102,11 @@ class Portfolios extends React.Component{
         return(
             <div className='main-page'>
                 <Title title='Portfolios'></Title>
+                <h1 className='port__title'>Free Code Came</h1>
+                <div className='grid'>
+                    {items}
+                </div>
+                <h1 className='port__title'>Free Code Came</h1>
                 <div className='grid'>
                     {items}
                 </div>

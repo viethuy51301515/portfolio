@@ -30,6 +30,16 @@ class Contact extends React.Component{
                             </label>
                             <input id='name' name='name'/>
                         </div>
+                        <div className='form__item'>
+                            <label>
+                                Enter your message
+                            </label>
+                            <textarea id='name' name='name' rows='10'/>
+                        </div>
+                        <div className='form__item'>
+                            <button>Send Email</button>
+                        </div>
+
                      </section>
                      <section className='contact__infor'>
                         <div className='infor__item'>
@@ -41,7 +51,25 @@ class Contact extends React.Component{
                                 <p>01264895603</p>
                             </div>
                         </div>
-                        
+                        <div className='infor__item'>
+                            <div>
+                                <span className='icon-email'></span>
+                            </div>
+                            <div>
+                                <h1>Email</h1>
+                                <p>01264895603</p>
+                                <p>01264895603</p>
+                            </div>
+                        </div>
+                        <div className='infor__item'>
+                            <div>
+                                <span className='icon-mobile-phone'></span>
+                            </div>
+                            <div>
+                                <h1>Phone</h1>
+                                <p>01264895603</p>
+                            </div>
+                        </div>
                      </section>
                  </div>
             </div>
