@@ -5,7 +5,6 @@
     position: relative;
 }
 .contact__form{
-    height: 100vh;
     width: 50%;
     padding-right: 30px;
     h1{
@@ -71,7 +70,6 @@
    
 }
 .contact__infor{
-    height: 100vh;
     width: 50%;
 
     .infor__item{
@@ -80,6 +78,8 @@
         padding: 40px;
         width: 100%;
         margin-bottom: 10px;
+        border-radius: 10px;
+        animation: infor-motion 2s;
         div:nth-child(1){
             border: $border-style;
             align-items: center;
@@ -105,4 +105,12 @@
         }
     }
 
+}
+@keyframes infor-motion{
+    from{
+        transform:  rotateX(90deg);
+    }
+    to{
+        transform:rotateX(0);
+    }
 }
