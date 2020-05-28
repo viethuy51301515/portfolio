@@ -10,6 +10,7 @@ class Achivement extends React.Component{
         var items = [];
         for (let index = 0; index < 4; index++) {
             items.push(
+                <div>
                 <section className='achivement-item'>
                         <div className='achivement-item__info'>    
                             <article>
@@ -32,6 +33,7 @@ class Achivement extends React.Component{
                             </figure>
                         </div>
                 </section>
+                </div>
             )
         }
         return(

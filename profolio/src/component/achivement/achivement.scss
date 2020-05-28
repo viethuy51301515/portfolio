@@ -1,20 +1,25 @@
+@import '../../global.scss';
 .achivement-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
     
     position: relative;
-    >section{
+    >div{
+        position: relative;
         height: 300px;
-        background-color: white;
         margin: 10px;
+        perspective: 600px;
+    }
+    section{
+       
+        background-color: white;
+        height: 300px;
         display: flex;
         border-radius: 10px;
         overflow: hidden;
         transition: 0.2s all ease-in-out;
-        // perspective-origin: 50% 50%;
-        // position: absolute;
-        // transform-style: preserve-3d;
-        // transform-origin: top center;
+        transform-origin: top center;
+        @include animation;
         // box-shadow: 0 0 10px white;
         .achivement-item__info{
             width: 75%;
@@ -66,6 +71,6 @@
         }
     }
     section:hover{
-        transform: translateY(-6px) rotateX(7deg);
+        transform: translateY(-6px) rotateX(5deg);
     }
 }
