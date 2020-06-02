@@ -18,7 +18,10 @@
         border-radius: 10px;
         overflow: hidden;
         transition: 0.2s all ease-in-out;
-        transform-origin: top center;
+        // transform-origin: top center;
+        user-select: none;
+        // backface-visibility: hidden;
+        transform-origin: center right;
         @include animation;
         // box-shadow: 0 0 10px white;
         .achivement-item__info{
@@ -72,5 +75,21 @@
     }
     section:hover{
         transform: translateY(-6px) rotateX(5deg);
+    }
+    .achivement-img{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 100%;
+        width: 100%; 
+        transform: rotateX(180deg);
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        transition: 0.4s all ease-in-out;
+        transform-origin: center right;
+    }
+    .achivement-img--fliped{
+        transform: translateY(-100%) rotateX(180deg) !important;;
     }
 }
