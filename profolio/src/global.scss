@@ -13,6 +13,10 @@ $border-color:#2e344e;
 @mixin animation {
     animation: animate 0.5s;
 }
+@mixin process-animation($time,$delay){
+    animation: process-animate $time;
+    animation-delay: $delay;
+}
 @keyframes animate{
     from{
         transform: scale(0);
@@ -21,5 +25,10 @@ $border-color:#2e344e;
     to{
         transform: scale(1);
         opacity: 1;
+    }
+}
+@keyframes process-animate{
+    from{
+        width: 0;
     }
 }

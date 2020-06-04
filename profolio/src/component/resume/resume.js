@@ -27,7 +27,7 @@ class Resume extends React.Component{
                 <div className='process-inner'>
                     <div className='process-percentange'>95%</div>
                     <div className='process-container'>
-                        <span></span>
+                        <span style={{width:'90%'}}></span>
                     </div>
                 </div>
  
