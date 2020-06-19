@@ -1,16 +1,18 @@
 @import '../../global.scss';
 .hamburger-button{
-    position: absolute;
+    position: fixed;
     height: 50px;
     width: 50px;
     background-color: $menu-color;
     border: $border-style;
     top: 10px;
-    left: 100%;
+    left: $menu-width;
     outline: none;
     font-size: 30px;
     color: white;
-    display: none;
+    z-index: 100;
+    transition: 0.3s all ease-in-out;
+    visibility: hidden;
 }
 .user-profile{
     border-bottom: $border-style;
@@ -31,8 +33,9 @@
 }
 .menu-list{
     border-bottom: $border-style;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    // padding-top: 20px;
+    // padding-bottom: 20px;
+
     ul{
         list-style: none;
         text-align: center;
@@ -86,9 +89,27 @@
     background-color: $blue-color;
     color: black;
 }
-@media only screen and (max-width : 600px){
+@media only screen and (max-width : 1000px){
     .hamburger-button{
         visibility: visible;
-        display: block;
+        left: 0%;
+    }
+    .menu{
+        left: -$menu-width !important;
+    }
+    .layout{
+        padding-left: 0 !important;
+    }
+    .menu__close{
+        left: 0 !important;
+    }
+    .hambuger__close{
+        left: $menu-width !important;
     }
 }
+// .menu__close{
+//     left: -$menu-width;
+// }
+// .hambuger__close{
+//     left: 0%;
+// }

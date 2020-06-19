@@ -4,17 +4,21 @@
     min-height: 100vh;
     max-width: 1150px;
     margin: auto;
-    @include padding-all
+    @include padding-all;
 }
+// .page{
+//    margin-left:$menu-width
+// }
 .layout{
-    padding-left: 260px;
+    padding-left: $menu-width;
 }
 .menu{
-    width: 260px;
-    height: 100vh;
+    width: $menu-width;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 105;
     right: unset;
     border-right: $border-style;
     background-color:  $menu-color;
@@ -22,7 +26,10 @@
     transition: 0.3s all ease-in-out;
 }
 .menu__close{
-    left: -260px;
+    left: -$menu-width;
+}
+.hambuger__close{
+    left: 0%;
 }
 .main{
     position: relative;

@@ -16,7 +16,7 @@ class About extends React.Component{
                     </figure>
                     <article className='about-content__info'>
                         <h1>
-                        I am <span>Devid Chester</span>
+                        I am <span>Phan Viet Huy</span>
                         </h1>
                         <p>
                             I am a frontend web developer. I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations.

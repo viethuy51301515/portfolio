@@ -1,5 +1,5 @@
 import React from 'react';
-import Menu from '../menu';
+import {Menu,HamburgerMenu} from '../menu';
 import './layout.scss'
 import {BrowserRouter,Route} from 'react-router-dom'
 import Home from '../home';
@@ -19,6 +19,7 @@ class Layout extends React.Component{
                     <section className='menu'>
                         <Menu></Menu>
                     </section>
+                    {/* <HamburgerMenu/> */}
                     <section className='main'>
                         <div className='main__grid'>
                             <span></span>
@@ -26,14 +27,17 @@ class Layout extends React.Component{
                             <span></span>
                             <span></span>
                         </div>
-        
-                        <Route path='/portfolio' exact component={Home}></Route>
-                        <Route path='/' exact component={Home}></Route>
-                        <Route path='/about' exact component={About}></Route>
-                        <Route path='/achivement' exact component={Achivement}></Route>
-                        <Route path='/contact' exact component={Contact}></Route>
-                        <Route path='/portfolios' exact component={Portfolios}></Route>
-                        <Route path='/resume' exact component={Resume}></Route>
+                            <Route path='/portfolio' exact component={Home}></Route>
+                            <Route path='/' exact component={Home}></Route>
+                        <div className='page'>
+                           
+                            <Route path='/about' exact component={About}></Route>
+                            <Route path='/achivement' exact component={Achivement}></Route>
+                            <Route path='/contact' exact component={Contact}></Route>
+                            <Route path='/portfolios' exact component={Portfolios}></Route>
+                            <Route path='/resume' exact component={Resume}></Route>
+                        </div>
+                      
 
                     </section>
                 </BrowserRouter>

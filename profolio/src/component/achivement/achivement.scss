@@ -17,11 +17,10 @@
         display: flex;
         border-radius: 10px;
         overflow: hidden;
-        transition: 0.4s all ease-in-out;
+        transition: 0.2s all ease-in-out;
         // transform-origin: top center;
         user-select: none;
-        backface-visibility: hidden;
- 
+        // backface-visibility: hidden;
         transform-origin: center top;
         @include animation;
         // box-shadow: 0 0 10px white;
@@ -91,8 +90,7 @@
         transform-origin: center right;
     }
     .achivement-img--fliped{
-        transform:translateY(100%) rotateX(180deg) !important;
-        opacity: 0;
-        visibility: hidden;
+        transform: rotateX(90deg) !important;
+        // opacity: 0;
     }
 }

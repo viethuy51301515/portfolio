@@ -2,15 +2,36 @@ import React, { Fragment } from 'react';
 import './menu.scss';
 import {Link} from 'react-router-dom'
 const profileImg = require("../../image/hinhnen.jpg")
-class Menu extends React.Component{
+export class HamburgerMenu extends React.Component{
     state = {
-        hamburgerState : "open",
+        hamburgerState : "open"
+    }
+    toggleMenu(){
+        this.setState({
+            hamburgerState : this.state.hamburgerState == 'open' ? "close" : "open"
+        });
+        document.getElementsByClassName('menu')[0].classList.toggle("menu__close");
+        document.getElementsByClassName('hamburger-button')[0].classList.toggle("hambuger__close");
+    }
+    render(){
+        return (
+            <Fragment>
+                 <button className='hamburger-button' onClick={this.toggleMenu.bind(this)}>
+                    <span className={this.state.hamburgerState == "close" ? 'icon-hamburger-menu' : "icon-hamburger-menu-close"}>
+
+                    </span>
+                </button>
+            </Fragment>
+        )
+    }
+}
+export class Menu extends React.Component{
+    state = {
+        // hamburgerState : "open",
         currentMenuIndex:"1",
     }
     constructor(props){
         super(props);
-
-        this.toggleMenu = this.toggleMenu.bind(this);
         this.activeMenu = this.activeMenu.bind(this);
     }
     activeMenu(index){
@@ -18,20 +39,10 @@ class Menu extends React.Component{
             currentMenuIndex:index
         })
     }
-    toggleMenu(){
-        this.setState({
-            hamburgerState : this.state.hamburgerState == 'open' ? "close" : "open"
-        });
-        document.getElementsByClassName('menu')[0].classList.toggle("menu__close");
-    }
     render(){
         return(
             <Fragment>
-                <button className='hamburger-button' onClick={this.toggleMenu}>
-                    <span className={this.state.hamburgerState == "close" ? 'icon-hamburger-menu' : "icon-hamburger-menu-close"}>
-
-                    </span>
-                </button>
+                <HamburgerMenu />
                 <div className='user-profile'>
                     <figure>
                         <img src={profileImg} alt=""/>
@@ -54,4 +65,5 @@ class Menu extends React.Component{
         )
     }
 }
-export default Menu;
+// export default {Menu,HamburgerMenu};
+// export {default} HamburgerMenu;
