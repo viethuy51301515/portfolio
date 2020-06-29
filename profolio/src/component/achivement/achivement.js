@@ -24,12 +24,12 @@ class Achivement extends React.Component{
         for (let index = 0; index < 4; index++) {
             items.push(
                 <div>
-                    <section className={classM} onClick={this.openImg.bind(this)}>
+                    <section className={classM}>
                             <div className='achivement-item__info'>    
                                 <article>
                                     <p>Achivement</p>
                                     <p>Customizing Colors and Fonts</p>
-                                    <p>How to make the websites</p>
+                                    <a href='https://www.freecodecamp.org/certification/viethuy/front-end-libraries' target='_blank'>How to make the websites</a>
                                 </article>
                                 <article>
                                     <span style={{color:'5fcf80'}} className='icon-checkmark-circle'></span>

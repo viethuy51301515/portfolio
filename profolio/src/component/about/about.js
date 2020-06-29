@@ -1,12 +1,12 @@
 import React from 'react';
 import Title from '../title_header';
 import './about.scss';
+import {useSelector} from 'react-redux' ;
 var profileImage = require('../../image/hinhnen.jpg')
-class About extends React.Component{
-    constructor(props){
-        super(props);
-    }
-    render(){
+
+function About (props){
+    const infor = useSelector(state => state.getInforReducer)
+    console.log(infor);
         return(
             <div className='about main-page'>
                 <Title title='ABOUT ME'></Title>
@@ -16,7 +16,7 @@ class About extends React.Component{
                     </figure>
                     <article className='about-content__info'>
                         <h1>
-                        I am <span>Phan Viet Huy</span>
+                        I am <span>{infor.name}</span>
                         </h1>
                         <p>
                             I am a frontend web developer. I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations.
@@ -33,6 +33,5 @@ class About extends React.Component{
                 </section>
             </div>
         )
-    }
 }
 export default About;
