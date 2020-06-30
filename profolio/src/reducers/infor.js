@@ -1,14 +1,8 @@
 import CONSTANT from '../constants';
-const data ={
-    name:"Phan Viet Huy",
-    fullName:"Huy Phan",
-    age:25,
-    nationality:'Viet Nam'
-}
-const getInforReducer = (state = data,action)=>{
+const getInforReducer = (state = [],action)=>{
     switch (action.type) {
-        case CONSTANT.ACTION_CONSTANT.GET_INFOR:
-            return state = data;
+        case CONSTANT.ACTION_CONSTANT.GET_USER:
+            return state = action.payload;
         default:
             return state;
     }

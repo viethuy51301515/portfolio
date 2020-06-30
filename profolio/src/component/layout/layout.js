@@ -1,5 +1,4 @@
 import React from 'react';
-import {Menu,HamburgerMenu} from '../menu';
 import './layout.scss'
 import {BrowserRouter,Route} from 'react-router-dom'
 import Home from '../home';
@@ -8,6 +7,7 @@ import Achivement from '../achivement';
 import Contact from '../contact';
 import Portfolios from '../portfolios';
 import Resume from '../resume';
+import Menu from '../menu';
 class Layout extends React.Component{
     constructor(props){
         super(props);

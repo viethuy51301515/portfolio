@@ -1,8 +1,12 @@
 import React, { Fragment } from 'react';
 import './menu.scss';
+import CONSTANT from '../../constants';
 import {Link} from 'react-router-dom'
-const profileImg = require("../../image/hinhnen.jpg")
-export class HamburgerMenu extends React.Component{
+import {useDispatch} from 'react-redux';
+import {connect} from 'react-redux';
+import {getInfor} from '../../action';
+const profileImg = require("../../image/hinhnen.jpg");
+class HamburgerMenu extends React.Component{
     state = {
         hamburgerState : "open"
     }
@@ -25,7 +29,7 @@ export class HamburgerMenu extends React.Component{
         )
     }
 }
-export class Menu extends React.Component{
+class MenuTemp extends React.Component{
     state = {
         // hamburgerState : "open",
         currentMenuIndex:"1",
@@ -38,6 +42,14 @@ export class Menu extends React.Component{
         this.setState({
             currentMenuIndex:index
         })
+        // switch (index) {
+        //     case 2:
+        //         this.props.getInfor();
+        //         break;
+        
+        //     default:
+        //         break;
+        // }
     }
     render(){
         return(
@@ -59,11 +71,19 @@ export class Menu extends React.Component{
                     </ul>
                 </div>
                 <div className='author'>
-                    <p>© 2020 NuclearThemes</p>
+                    <p>© Iris Huy</p>
                 </div>
             </Fragment>
         )
     }
 }
-// export default {Menu,HamburgerMenu};
+const mapDispatchToProps = dispatch =>{
+    return{
+        getInfor: ()=>{
+            dispatch(getInfor())
+        }
+    }
+}
+const Menu = connect(null,mapDispatchToProps)(MenuTemp);
+export default Menu;
 // export {default} HamburgerMenu;
