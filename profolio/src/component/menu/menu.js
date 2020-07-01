@@ -29,7 +29,7 @@ class HamburgerMenu extends React.Component{
         )
     }
 }
-class MenuTemp extends React.Component{
+class Menu extends React.Component{
     state = {
         // hamburgerState : "open",
         currentMenuIndex:"1",
@@ -42,14 +42,6 @@ class MenuTemp extends React.Component{
         this.setState({
             currentMenuIndex:index
         })
-        // switch (index) {
-        //     case 2:
-        //         this.props.getInfor();
-        //         break;
-        
-        //     default:
-        //         break;
-        // }
     }
     render(){
         return(
@@ -77,13 +69,5 @@ class MenuTemp extends React.Component{
         )
     }
 }
-const mapDispatchToProps = dispatch =>{
-    return{
-        getInfor: ()=>{
-            dispatch(getInfor())
-        }
-    }
-}
-const Menu = connect(null,mapDispatchToProps)(MenuTemp);
 export default Menu;
 // export {default} HamburgerMenu;
