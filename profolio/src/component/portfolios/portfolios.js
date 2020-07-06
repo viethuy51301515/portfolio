@@ -101,7 +101,6 @@ class Portfolios extends React.Component{
         var items = portfolios.map(item => {
             return (<PortForlioItem title={item.title} description={item.description} />)
         })
-        console.log(items);
         return(
             <div className='main-page'>
                 <Title title='Portfolios'></Title>

@@ -9,6 +9,7 @@ var profileImage = require('../../image/hinhnen.jpg')
 function About (props){
     const infor = useSelector(state => state.getInforReducer)
     const dispatch = useDispatch();
+    console.log('123');
     // useEffect( ()=>{
     //     dispatch(getInfor());
     // },[]);

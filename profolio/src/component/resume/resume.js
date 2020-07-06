@@ -1,6 +1,8 @@
 import React from 'react';
 import Title from '../title_header';
 import './resume.scss';
+import {useEffect} from "react";
+import {useSelector} from 'react-redux';
 const Header = (props) =>{
     return(
         <div className='resume-smallheader'>
@@ -9,61 +11,83 @@ const Header = (props) =>{
         </div>
     )
 }
-class Resume extends React.Component{
-    constructor(props){
-        super(props);
-    }
-     
-    render(){
-        let listSkill =[];
-        let listWorking = [];
-        let i = 0;
-        while (i<6) {
-            listSkill.push(
-                <div className='process'>
-                <h2 className='process-tilte'>
-                    HTML5
-                </h2>
-                <div className='process-inner'>
-                    <div className='process-percentange'>95%</div>
-                    <div className='process-container'>
-                        <span style={{width:'90%'}}></span>
+var skills =[];
+var workings = [];
+var educations = [];
+const Resume  = (props) =>{
+    const data = useSelector(state => state.getInforReducer);
+    skills = [];
+
+    if(data.skill){
+        data.skill.forEach(element => {
+                    skills.push(
+                        <div className='process'>
+                        <h2 className='process-tilte'>
+                            {element.name}
+                        </h2>
+                        <div className='process-inner'>
+                            <div className='process-percentange'>{element.value}</div>
+                            <div className='process-container'>
+                                <span style={{width:element.value+'%'}}></span>
+                            </div>
+                        </div>
+        
                     </div>
-                </div>
- 
-            </div>
-            )
-            listWorking.push(
-                <div className='working-item'>
-                    <aside className='time'>
-                        <h1>2018 - Present</h1>
-                    </aside>
-                    <article className='working-des'>
-                        <h1>Frontend Web Developer</h1>
-                        <h3>Abc Company</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro.</p>
-                    </article>
-                </div>
-            )
-            i++;
+                    )
+                });
+    }
+
+    workings = [];
+    educations = [];
+    if(data.experience){
+        data.experience.forEach(element => {
+            if(element.type =='exp'){
+                workings.push(
+                    <div className='working-item'>
+                        <aside className='time'>
+                            <h1>{element.year}</h1>
+                        </aside>
+                        <article className='working-des'>
+                            <h1>{element.position}</h1>
+                            <h3>{element.company}</h3>
+                            <p>{element.description}</p>
+                        </article>
+                    </div>
+                )
+            }
+            else if(element.type =='edu'){
+                educations.push(
+                    <div className='working-item'>
+                        <aside className='time'>
+                            <h1>{element.year}</h1>
+                        </aside>
+                        <article className='working-des'>
+                            <h1>{element.position}</h1>
+                            <h3>{element.company}</h3>
+                            <p>{element.description}</p>
+                        </article>
+                    </div>
+                )
+            }
         }
-        return(
-            <div className='main-page resume'>
-                <Title title='my skills'></Title>
-                <section className='skills'>
-                   {listSkill}
-                </section>
-                <Title title='resume'></Title>
-                <Header title='working experience'/>
-                <section className='working'>
-                    {listWorking}
-                </section>
-                <Header title='education'/>
-                <section className='working'>
-                    {listWorking}
-                </section>
-            </div>
         )
     }
+    return(
+        <div className='main-page resume'>
+            <Title title='my skills'></Title>
+            <section className='skills'>
+                {skills}
+            </section>
+            <Title title='resume'></Title>
+            <Header title='working experience'/>
+            <section className='working'>
+                {workings}
+            </section>
+            <Header title='education'/>
+            <section className='working'>
+                {educations}
+            </section>
+        </div>
+    )
 }
 export default Resume;
