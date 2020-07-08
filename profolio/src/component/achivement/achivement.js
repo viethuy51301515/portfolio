@@ -45,9 +45,6 @@ const Achivement = (props) =>{
                 </div>
             )
         })
-
-
-        
     }
 
     return(
