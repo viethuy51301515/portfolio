@@ -1,5 +1,6 @@
 import React from 'react';
 import Title from '../title_header';
+import {useSelector} from "react-redux";
 import {Suspense} from 'react';
 import './portfolios.scss';
 var img = require('../../image/cloth.jpg')
@@ -93,27 +94,25 @@ const PortForlioItem = function(props) {
         // </Suspense>
     )
 }
-class Portfolios extends React.Component{
-    constructor(props){
-        super(props);
-    }
-    render(){
-        var items = portfolios.map(item => {
+const Portfolios = (props)=>{
+    const data = useSelector(state => state.getInforReducer);
+    if(data.portfolio){
+        var items = data.portfolio.map(item => {
             return (<PortForlioItem title={item.title} description={item.description} />)
         })
-        return(
-            <div className='main-page'>
-                <Title title='Portfolios'></Title>
-                <h1 className='port__title'>Free Code Came</h1>
-                <div className='grid'>
-                    {items}
-                </div>
-                <h1 className='port__title'>Free Code Came</h1>
-                <div className='grid'>
-                    {items}
-                </div>
-            </div>
-        )
     }
+    return(
+        <div className='main-page'>
+            <Title title='Portfolios'></Title>
+            <h1 className='port__title'>Free Code Came</h1>
+            <div className='grid'>
+                {items}
+            </div>
+            <h1 className='port__title'>Free Code Came</h1>
+            <div className='grid'>
+                {items}
+            </div>
+        </div>
+    )
 }
 export default Portfolios;
