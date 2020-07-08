@@ -45,16 +45,6 @@ const Achivement = (props) =>{
                 </div>
             )
         })
-<<<<<<< HEAD
-=======
-
-
-        
-
-
-
-        
->>>>>>> 6488e1f0da59884283426cce6cdd3783cce9bac7
     }
 
     return(
