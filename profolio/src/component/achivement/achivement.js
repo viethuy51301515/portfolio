@@ -20,9 +20,9 @@ const Achivement = (props) =>{
                     <section className={classM}>
                             <div className='achivement-item__info'>    
                                 <article>
-                                    <p>Achivement</p>
+                                    <p>{element.title}</p>
                                     <p>{element.name}</p>
-                                    <a href={element.link} target='_blank'>How to make the websites</a>
+                                    <a href={element.link} target='_blank'>Check more</a>
                                 </article>
                                 <article>
                                     <span style={{color:'5fcf80'}} className='icon-checkmark-circle'></span>
@@ -35,7 +35,7 @@ const Achivement = (props) =>{
                             </div>
                             <div className='achivement-item__img'>
                                 <figure>
-                                    <img src={img}></img>
+                                    <img src={element.img}></img>
                                 </figure>
                             </div>
                     </section>
