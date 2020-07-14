@@ -103,6 +103,15 @@
     display: flex;
     padding-bottom: 40px;
 }
+.working-des__content{
+    ul{
+        list-style: inside;
+    }
+    p{
+        line-height: 30px;
+    }
+   
+}
 @media only screen and (max-width : 700px){
     .process-inner{
         flex-direction: column;

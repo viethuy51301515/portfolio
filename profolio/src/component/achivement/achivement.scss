@@ -28,7 +28,7 @@
             width: 75%;
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: space-between;
             margin: 20px;
             article:nth-child(1){
                 p:nth-child(1){
@@ -45,15 +45,21 @@
                     line-height: 1.5rem;
                     font-size: 1rem;
                     padding-top: 5px;
+                    text-decoration: none;
                 }
             }
             article:nth-child(2){
-                span{
-                    display: inline-block;
+                display: flex;
+                justify-content: space-between;
+                div:nth-child(1){
+                    span{
+                        display: inline-block;
+                    }
+                    aside{
+                        display: inline-block;
+                    }
                 }
-                aside{
-                    display: inline-block;
-                }
+
             }
         }
         .achivement-item__img{

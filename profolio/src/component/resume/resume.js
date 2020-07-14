@@ -3,6 +3,7 @@ import Title from '../title_header';
 import './resume.scss';
 import {useEffect} from "react";
 import {useSelector} from 'react-redux';
+import marked from 'marked'
 const Header = (props) =>{
     return(
         <div className='resume-smallheader'>
@@ -41,6 +42,7 @@ const Resume  = (props) =>{
     educations = [];
     if(data.experience){
         data.experience.forEach(element => {
+            let content = marked(element.description.split("\\n").join('\n'))
             if(element.type =='exp'){
                 workings.push(
                     <div className='working-item'>
@@ -50,7 +52,7 @@ const Resume  = (props) =>{
                         <article className='working-des'>
                             <h1>{element.position}</h1>
                             <h3>{element.company}</h3>
-                            <p>{element.description}</p>
+                            <div className='working-des__content' dangerouslySetInnerHTML={{__html:content}} />
                         </article>
                     </div>
                 )
