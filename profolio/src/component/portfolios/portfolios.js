@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Title from '../title_header';
 import {useSelector} from "react-redux";
 import {Suspense} from 'react';
@@ -82,7 +82,7 @@ const PortForlioItem = function(props) {
             <div className='portfolio-item'>
                 <div className='portfolio-item__image'>
                     <img src={img} alt=""/>
-                    <a href='www.google.com'><span class="action icon-inspector-arrow"></span></a>
+                    <a href='www.google.com'><span className="action icon-inspector-arrow"></span></a>
                 </div>
                 <h5 className='portfolio-item__title'>
                     {props.title}
@@ -96,22 +96,41 @@ const PortForlioItem = function(props) {
 }
 const Portfolios = (props)=>{
     const data = useSelector(state => state.getInforReducer);
+    let listItem = [];
+    let listUI = [];
     if(data.portfolio){
-        var items = data.portfolio.map(item => {
-            return (<PortForlioItem title={item.title} description={item.description} />)
+      
+        data.portfolio.forEach(element => {
+            if(listItem.findIndex(item => item == element.type) == -1){
+                listItem = [element.type,...listItem];
+            }
+        });
+        
+        listItem.forEach(port => {
+            var items = [];
+            data.portfolio.forEach(item => {
+                if(item.type == port){
+                    items.push(
+                        <PortForlioItem title={item.title} description={item.description} />
+                    )    
+                }
+            });
+            listUI.push(
+                <Fragment>
+                    <h1 className='port__title'>{port}</h1>
+                    <div className='grid'>
+                        {items}
+                    </div>
+                </Fragment>            
+
+            )
         })
+        console.log(listUI);
     }
     return(
         <div className='main-page'>
             <Title title='Portfolios'></Title>
-            <h1 className='port__title'>Free Code Came</h1>
-            <div className='grid'>
-                {items}
-            </div>
-            <h1 className='port__title'>Free Code Came</h1>
-            <div className='grid'>
-                {items}
-            </div>
+            {listUI}
         </div>
     )
 }
