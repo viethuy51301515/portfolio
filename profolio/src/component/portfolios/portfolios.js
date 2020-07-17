@@ -79,7 +79,7 @@ let portfolios = [
 const PortForlioItem = function(props) {
     return(
         // <Suspense fallback={<div>loader</div>}>
-            <div className='portfolio-item'>
+            <a className='portfolio-item'>
                 <div className='portfolio-item__image'>
                     <img src={img} alt=""/>
                     <a href='www.google.com'><span className="action icon-inspector-arrow"></span></a>
@@ -90,7 +90,7 @@ const PortForlioItem = function(props) {
                 <h5 className='portfolio-item__description'>
                     {props.description}
                 </h5>
-            </div>
+            </a>
         // </Suspense>
     )
 }
