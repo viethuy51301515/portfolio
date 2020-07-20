@@ -43,6 +43,7 @@ const Resume  = (props) =>{
     if(data.experience){
         data.experience.forEach(element => {
             let content = marked(element.description.split("\\n").join('\n'))
+            console.log(content);
             if(element.type =='exp'){
                 workings.push(
                     <div className='working-item'>

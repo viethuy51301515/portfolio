@@ -79,10 +79,10 @@ let portfolios = [
 const PortForlioItem = function(props) {
     return(
         // <Suspense fallback={<div>loader</div>}>
-            <a className='portfolio-item'>
+            <div className='portfolio-item'>
                 <div className='portfolio-item__image'>
-                    <img src={img} alt=""/>
-                    <a href='www.google.com'><span className="action icon-inspector-arrow"></span></a>
+                    <img src={props.img} alt=""/>
+                    <a href={props.link}><span className="action icon-inspector-arrow"></span></a>
                 </div>
                 <h5 className='portfolio-item__title'>
                     {props.title}
@@ -90,7 +90,7 @@ const PortForlioItem = function(props) {
                 <h5 className='portfolio-item__description'>
                     {props.description}
                 </h5>
-            </a>
+            </div>
         // </Suspense>
     )
 }
@@ -111,7 +111,7 @@ const Portfolios = (props)=>{
             data.portfolio.forEach(item => {
                 if(item.type == port){
                     items.push(
-                        <PortForlioItem title={item.title} description={item.description} />
+                        <PortForlioItem title={item.title} description={item.description} link={item.link} img={item.img} />
                     )    
                 }
             });
