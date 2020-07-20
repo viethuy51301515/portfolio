@@ -48,7 +48,7 @@ class Contact extends React.Component{
                             </div>
                             <div>
                                 <h1>Phone</h1>
-                                <p>01264895603</p>
+                                <p>0764895603</p>
                             </div>
                         </div>
                         <div className='infor__item'>
@@ -57,8 +57,7 @@ class Contact extends React.Component{
                             </div>
                             <div>
                                 <h1>Email</h1>
-                                <p>01264895603</p>
-                                <p>01264895603</p>
+                                <p>viethuy51301515@gmail.com</p>
                             </div>
                         </div>
                         <div className='infor__item'>
@@ -66,8 +65,8 @@ class Contact extends React.Component{
                                 <span className='icon-mobile-phone'></span>
                             </div>
                             <div>
-                                <h1>Phone</h1>
-                                <p>01264895603</p>
+                                <h1>GitHub</h1>
+                                <p>https://github.com/viethuy51301515</p>
                             </div>
                         </div>
                      </section>

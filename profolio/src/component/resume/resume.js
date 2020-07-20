@@ -67,7 +67,7 @@ const Resume  = (props) =>{
                         <article className='working-des'>
                             <h1>{element.position}</h1>
                             <h3>{element.company}</h3>
-                            <p>{element.description}</p>
+                            <div className='working-des__content' dangerouslySetInnerHTML={{__html:content}} />
                         </article>
                     </div>
                 )
