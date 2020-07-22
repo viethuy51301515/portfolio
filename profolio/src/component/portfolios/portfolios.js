@@ -3,6 +3,7 @@ import Title from '../title_header';
 import {useSelector} from "react-redux";
 import {Suspense} from 'react';
 import './portfolios.scss';
+import LazyLoad from 'react-lazyload';
 var img = require('../../image/cloth.jpg')
 let portfolios = [
     {

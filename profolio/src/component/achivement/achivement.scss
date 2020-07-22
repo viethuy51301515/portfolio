@@ -1,7 +1,7 @@
 @import '../../global.scss';
 .achivement-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill,minmax(400px, max-content));
     
     position: relative;
     >div{
@@ -18,12 +18,9 @@
         border-radius: 10px;
         overflow: hidden;
         transition: 0.2s all ease-in-out;
-        // transform-origin: top center;
         user-select: none;
-        // backface-visibility: hidden;
         transform-origin: center top;
         @include animation;
-        // box-shadow: 0 0 10px white;
         .achivement-item__info{
             width: 75%;
             display: flex;
