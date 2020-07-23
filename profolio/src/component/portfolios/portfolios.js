@@ -82,7 +82,10 @@ const PortForlioItem = function(props) {
         // <Suspense fallback={<div>loader</div>}>
             <div className='portfolio-item'>
                 <div className='portfolio-item__image'>
-                    <img src={props.img} alt=""/>
+                    <LazyLoad height={200} offset={100} once>
+                        <img src={props.img} alt=""/>
+                    </LazyLoad>
+                    
                     <a href={props.link}><span className="action icon-inspector-arrow"></span></a>
                 </div>
                 <h5 className='portfolio-item__title'>
@@ -109,10 +112,10 @@ const Portfolios = (props)=>{
         
         listItem.forEach(port => {
             var items = [];
-            data.portfolio.forEach(item => {
+            data.portfolio.forEach( (item,index) => {
                 if(item.type == port){
                     items.push(
-                        <PortForlioItem title={item.title} description={item.description} link={item.link} img={item.img} />
+                        <PortForlioItem key={index+'_portfolio'} title={item.title} description={item.description} link={item.link} img={item.img} />
                     )    
                 }
             });
