@@ -21,8 +21,8 @@ const Achivement = (props) =>{
                                 <article>
                                     <p>{element.title}</p>
                                     <p>{element.name}</p>
-                                    <a onClick={()=>{setOpacity([index,...op])}}>..more...</a>
-                                    <p style={ op.findIndex(item => item == index) == -1 ? {opacity:0,transition:'1s all ease'} : {opacity:1,transition:'1s all ease'}}> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, </p>
+                                    <a style={ op.findIndex(item => item == index) == -1 ? {opacity:1,transition:'0.5s all ease',lineHeight: '1.2em'} : {opacity:0,transition:'0.5s all ease',lineHeight: '1.2em'}} onClick={()=>{setOpacity([index,...op])}}>..more...</a>
+            <p style={ op.findIndex(item => item == index) == -1 ? {opacity:0,transition:'1s all ease',lineHeight: '1.2em'} : {opacity:1,transition:'1s all ease',lineHeight: '1.2em'}}> {element.des}</p>
                                 </article>
                                 <article>
                                     <div>

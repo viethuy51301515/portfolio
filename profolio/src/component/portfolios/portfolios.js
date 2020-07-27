@@ -4,6 +4,7 @@ import {useSelector} from "react-redux";
 import {Suspense} from 'react';
 import './portfolios.scss';
 import LazyLoad from 'react-lazyload';
+import {SelectOutlined} from '@ant-design/icons'
 var img = require('../../image/cloth.jpg')
 let portfolios = [
     {
@@ -86,7 +87,7 @@ const PortForlioItem = function(props) {
                         <img src={props.img} alt=""/>
                     </LazyLoad>
                     
-                    <a href={props.link}><span className="action icon-inspector-arrow"></span></a>
+                    <a href={props.link}><SelectOutlined className='action' style={{color:'white'}} /></a>
                 </div>
                 <h5 className='portfolio-item__title'>
                     {props.title}

@@ -4,9 +4,11 @@
   "private": true,
   "homepage": "https://viethuy51301515.github.io/portfolio/",
   "dependencies": {
+    "@ant-design/icons": "^4.2.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "antd": "^4.4.3",
     "firebase": "^7.16.1",
     "gh-pages": "^2.2.0",
     "marked": "^1.1.1",

@@ -25,12 +25,10 @@
     color: white;
     transition: 0.3s all ease-in-out;
 }
-.menu__close{
-    left: -$menu-width;
-}
-.hambuger__close{
-    left: 0%;
-}
+
+// .hambuger__close{
+//     left: 0%;
+// }
 .main{
     position: relative;
 }

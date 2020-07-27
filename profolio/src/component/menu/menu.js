@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom'
 import {useDispatch} from 'react-redux';
 import {connect} from 'react-redux';
 import {getInfor} from '../../action';
+import {MenuOutlined,CloseOutlined} from '@ant-design/icons';
 const profileImg = require("../../image/hinhnen.jpg");
 class HamburgerMenu extends React.Component{
     state = {
@@ -21,9 +22,13 @@ class HamburgerMenu extends React.Component{
         return (
             <Fragment>
                  <button className='hamburger-button' onClick={this.toggleMenu.bind(this)}>
-                    <span className={this.state.hamburgerState == "close" ? 'icon-hamburger-menu' : "icon-hamburger-menu-close"}>
+                     {
+                         this.state.hamburgerState == "close" ?      <CloseOutlined /> :      <MenuOutlined />
+                     }
+               
+                    {/* <span className={this.state.hamburgerState == "close" ? 'icon-hamburger-menu' : "icon-hamburger-menu-close"}>
 
-                    </span>
+                    </span> */}
                 </button>
             </Fragment>
         )

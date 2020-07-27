@@ -106,6 +106,9 @@
     .hambuger__close{
         left: $menu-width !important;
     }
+    .menu__resize{
+        left: -$menu-width;
+    }
 }
 // .menu__close{
 //     left: -$menu-width;

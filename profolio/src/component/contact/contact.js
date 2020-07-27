@@ -1,6 +1,7 @@
 import React from 'react';
 import './contact.scss'
 import Title from '../title_header';
+import {PhoneOutlined,MailOutlined,GithubOutlined} from '@ant-design/icons'
 class Contact extends React.Component{
     constructor(props){
         super(props)
@@ -44,7 +45,7 @@ class Contact extends React.Component{
                      <section className='contact__infor'>
                         <div className='infor__item'>
                             <div>
-                                <span className='icon-mobile-phone'></span>
+                                <PhoneOutlined />
                             </div>
                             <div>
                                 <h1>Phone</h1>
@@ -53,7 +54,7 @@ class Contact extends React.Component{
                         </div>
                         <div className='infor__item'>
                             <div>
-                                <span className='icon-email'></span>
+                                <MailOutlined />
                             </div>
                             <div>
                                 <h1>Email</h1>
@@ -62,7 +63,7 @@ class Contact extends React.Component{
                         </div>
                         <div className='infor__item'>
                             <div>
-                                <span className='icon-mobile-phone'></span>
+                                <GithubOutlined />
                             </div>
                             <div>
                                 <h1>GitHub</h1>
