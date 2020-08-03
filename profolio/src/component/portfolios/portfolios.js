@@ -79,6 +79,9 @@ let portfolios = [
     },
 ]
 const PortForlioItem = function(props) {
+    const openLink = (link) => {
+        window.open(link);
+    }
     return(
         // <Suspense fallback={<div>loader</div>}>
             <div className='portfolio-item'>
@@ -87,7 +90,7 @@ const PortForlioItem = function(props) {
                         <img src={props.img} alt=""/>
                     </LazyLoad>
                     
-                    <a href={props.link}><SelectOutlined className='action' style={{color:'white'}} /></a>
+                    <a href='#' onClick={()=>{openLink(props.link)}}><SelectOutlined className='action' style={{color:'white'}} /></a>
                 </div>
                 <h5 className='portfolio-item__title'>
                     {props.title}
